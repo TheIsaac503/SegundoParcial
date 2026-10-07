@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Universitaria - Sistema de Préstamos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>📚 Biblioteca Universitaria</h1>
+            <p class="subtitle">Sistema de consulta y préstamo de materiales</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="catalogo">
+            <h2>Catálogo de Materiales</h2>
+            <p class="descripcion">Selecciona un material para solicitar su préstamo.</p>
+
+            <div class="materiales-grid" id="lista-materiales">
+                <!-- Material 1: Libro -->
+                <article class="tarjeta libro" data-tipo="Libro" data-titulo="Cien años de soledad" data-codigo="LIB-001" data-disponible="true">
+                    <div class="tipo-badge libro-badge">Libro</div>
+                    <h3>Cien años de soledad</h3>
+                    <p class="autor">Autor: Gabriel García Márquez</p>
+                    <p class="codigo">Código: LIB-001</p>
+                    <p class="disponibilidad disponible">Disponible</p>
+                    <p class="dias">Préstamo: 7 días</p>
+                    <button class="btn-prestamo" onclick="solicitarPrestamo(this)">Solicitar préstamo</button>
+                </article>
+
+                <!-- Material 2: Libro -->
+                <article class="tarjeta libro" data-tipo="Libro" data-titulo="El Principito" data-codigo="LIB-002" data-disponible="true">
+                    <div class="tipo-badge libro-badge">Libro</div>
+                    <h3>El Principito</h3>
+                    <p class="autor">Autor: Antoine de Saint-Exupéry</p>
+                    <p class="codigo">Código: LIB-002</p>
+                    <p class="disponibilidad disponible">Disponible</p>
+                    <p class="dias">Préstamo: 7 días</p>
+                    <button class="btn-prestamo" onclick="solicitarPrestamo(this)">Solicitar préstamo</button>
+                </article>
+
+                <!-- Material 3: Revista -->
+                <article class="tarjeta revista" data-tipo="Revista" data-titulo="National Geographic" data-codigo="REV-001" data-disponible="true">
+                    <div class="tipo-badge revista-badge">Revista</div>
+                    <h3>National Geographic</h3>
+                    <p class="autor">Edición: N° 248</p>
+                    <p class="codigo">Código: REV-001</p>
+                    <p class="disponibilidad disponible">Disponible</p>
+                    <p class="dias">Préstamo: 3 días</p>
+                    <button class="btn-prestamo" onclick="solicitarPrestamo(this)">Solicitar préstamo</button>
+                </article>
+
+                <!-- Material 4: Revista -->
+                <article class="tarjeta revista" data-tipo="Revista" data-titulo="Muy Interesante" data-codigo="REV-002" data-disponible="false">
+                    <div class="tipo-badge revista-badge">Revista</div>
+                    <h3>Muy Interesante</h3>
+                    <p class="autor">Edición: N° 512</p>
+                    <p class="codigo">Código: REV-002</p>
+                    <p class="disponibilidad no-disponible">No disponible</p>
+                    <p class="dias">Préstamo: 3 días</p>
+                    <button class="btn-prestamo" onclick="solicitarPrestamo(this)" disabled>No disponible</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Mensaje de confirmación -->
+        <div id="mensaje" class="mensaje oculto"></div>
+    </main>
+
+    <footer>
+        <p>Biblioteca Universitaria &copy; 2026 — Evaluación Práctica POO</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
